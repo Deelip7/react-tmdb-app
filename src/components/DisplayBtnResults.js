@@ -3,7 +3,7 @@ import DisplayBtnResult from './DisplayBtnResult';
 
 function DisplayBtnResults({ results }) {
   return (
-    <div>
+    <div className='card-container'>
       {results.map((result) => {
         return <DisplayBtnResult key={result.id} result={result} />;
       })}
