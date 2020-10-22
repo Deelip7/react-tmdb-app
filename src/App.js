@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import './App.css';
 import PopularMovies from './components/PopularMovies';
+import DisplayBtnResults from './components/DisplayBtnResults';
 
 require('dotenv').config();
 
@@ -18,16 +19,18 @@ function App() {
       .then((data) => {
         let results = data.data.results;
         setMovie((prevstate) => {
-          console.log(prevstate);
           return { ...prevstate, results: results };
         });
       })
       .catch((error) => console.log('Error:', error.message));
   };
 
+  // const btnResults = (e) => {};
+
   return (
     <div className='App'>
       <PopularMovies showPopularMovies={showPopularMovies} />
+      <DisplayBtnResults results={movie.results} />
     </div>
   );
 }
