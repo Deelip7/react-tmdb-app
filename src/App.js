@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import PopularMovies from './components/PopularMovies';
 import DisplayBtnResults from './components/DisplayBtnResults';
@@ -13,8 +13,9 @@ function App() {
   });
 
   const showPopularMovies = (e) => {
-    e.preventDefault();
-    const buttonType = e.target.id;
+    // e.preventDefault();
+    const buttonType = typeof e === 'string' ? e : e.target.id;
+
     axios(`https://api.themoviedb.org/3/movie/${buttonType}?api_key=${TMDB_KEY}&language=en-US&page=1`)
       .then((data) => {
         let results = data.data.results;
@@ -25,6 +26,7 @@ function App() {
       .catch((error) => console.log('Error:', error.message));
   };
 
+  useEffect(() => showPopularMovies('popular'), []);
   // const btnResults = (e) => {};
 
   return (
