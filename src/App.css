@@ -39,6 +39,12 @@ img {
   border-radius: 5px;
   box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.417);
 }
+
+svg {
+  width: 1%;
+  height: 10%;
+}
+
 .card-release_date {
   font-size: 0.75rem;
   margin: 10px 0px 3px;
