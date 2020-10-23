@@ -8,6 +8,7 @@ require('dotenv').config();
 
 function App() {
   const TMDB_KEY = process.env.REACT_APP_TMDB_API;
+  console.log(TMDB_KEY);
   const [movie, setMovie] = useState({
     searchTerm: '',
     results: [],
