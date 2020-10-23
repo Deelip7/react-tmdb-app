@@ -1,7 +1,7 @@
 import React from 'react';
-import DisplayBtnResult from './DisplayBtnResult';
+import DisplayBtnResult from './DisplayMovieResult';
 
-function DisplayBtnResults({ results }) {
+function DisplayMovieResults({ results }) {
   return (
     <div className='card-container'>
       {results.map((result) => {
@@ -11,4 +11,4 @@ function DisplayBtnResults({ results }) {
   );
 }
 
-export default DisplayBtnResults;
+export default DisplayMovieResults;
