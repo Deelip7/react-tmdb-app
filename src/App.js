@@ -15,7 +15,7 @@ function App() {
   });
 
   const showMoviesOnBtn = (e) => {
-    const buttonType = typeof e === 'string' ? e : e.target.id;
+    const buttonType = typeof e === 'string' ? e : e.target.className;
 
     axios(`https://api.themoviedb.org/3/movie/${buttonType}?api_key=${TMDB_KEY}&language=en-US&page=1`)
       .then((data) => {

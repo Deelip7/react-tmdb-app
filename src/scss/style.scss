@@ -9,8 +9,8 @@
 body {
   color: #eaeaea;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #24323f;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .App {
@@ -22,25 +22,33 @@ body {
 
 header {
   .search-container {
-    width: 100%;
-    height: 70px;
-    background-color: #1a2634;
-    display: flex;
-    justify-content: flex-start;
-    box-shadow: 5px 1px 10px -2px #0000006a;
-    position: fixed;
     z-index: 1;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    justify-content: flex-start;
+    background-color: #1a2634;
+    box-shadow: 5px 2px 10px -2px #00000031;
 
     input {
-      margin: 10px 35px;
-      background-color: inherit;
       border: none;
-      color: #eaeaeaa7;
-      font-style: italic;
+      color: #eaeaea;
+      margin: 10px;
+      background-color: inherit;
     }
+
+    input::placeholder {
+      font-style: italic;
+      color: #eaeaeaa7;
+    }
+
     img {
-      width: 60px;
-      margin: 0 1rem;
+      //   width: 60px;
+      margin-left: 1rem;
+    }
+    .search-icon {
+      margin-left: 3em;
     }
   }
 }
@@ -51,41 +59,46 @@ main {
 
   aside {
     display: flex;
-    box-shadow: 5px 1px 10px -2px #0000006a;
-    background-color: #3b4956;
-    position: relative;
-    min-width: 120px;
+    min-width: 95px;
     min-height: 100vh;
+    background-color: #3b4956;
+    box-shadow: 5px 1px 10px -2px #00000031;
 
     .navlink-container {
-      position: fixed;
       display: flex;
-      flex-direction: column;
+      position: fixed;
       margin-top: 80px;
+      flex-direction: column;
 
-      .filter-btn {
+      #filter-btn {
+        gap: 10px;
         border: none;
-        color: #eaeaea;
-        text-align: start;
-        padding: 1rem;
-        background-color: inherit;
+        display: flex;
         cursor: pointer;
+        color: #eaeaea;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 1rem 0.8rem;
+        flex-direction: column;
+        background-color: inherit;
       }
     }
   }
 
   h1 {
-    margin: 110px 0px 0px;
-    padding-bottom: 40px;
-    width: 90%;
-    font-size: 1.3rem;
-    font-weight: 100;
-    border-bottom: 2px solid #1a263477;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.7rem;
+    padding-bottom: 50px;
+    margin: 110px 0px 30px;
+    box-shadow: 0 4px 2px -2px #00000013;
+    border-bottom: 1px solid #3fbfc87c;
   }
 
   .card-container {
     gap: 40px;
     display: flex;
+    padding: 0 4vw;
     flex-flow: row wrap;
     justify-content: center;
 
@@ -96,6 +109,7 @@ main {
       height: 350px;
       padding: 20px 0;
       text-align: left;
+      margin-bottom: 50px;
 
       &-poster {
         width: 100%;
@@ -107,9 +121,9 @@ main {
       }
 
       &-release_date {
-        font-size: 0.75rem;
-        margin: 10px 0px 3px;
         color: #bebebe;
+        font-size: 0.75rem;
+        margin: 10px 0px 5px;
       }
 
       &-title {
