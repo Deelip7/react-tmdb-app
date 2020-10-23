@@ -8,10 +8,10 @@ require('dotenv').config();
 
 function App() {
   const TMDB_KEY = process.env.REACT_APP_TMDB_API;
-  console.log(process.env);
   const [movie, setMovie] = useState({
     searchTerm: '',
     results: [],
+    filterType: '',
   });
 
   const showMoviesOnBtn = (e) => {
@@ -22,7 +22,7 @@ function App() {
         let results = data.data.results;
 
         setMovie((prevState) => {
-          return { ...prevState, results: results };
+          return { ...prevState, results: results, filterType: buttonType };
         });
       })
       .catch((error) => console.log('Error:', error.message));
@@ -44,9 +44,17 @@ function App() {
 
   return (
     <div className='App'>
-      <FilterMovies showMoviesOnBtn={showMoviesOnBtn} />
-      <SearchMovies showMoviesOnSearch={showMoviesOnSearch} />
-      <DisplayMovieResults results={movie.results} />
+      <header>
+        <SearchMovies showMoviesOnSearch={showMoviesOnSearch} />
+      </header>
+      <main>
+        <aside>
+          <FilterMovies showMoviesOnBtn={showMoviesOnBtn} />
+        </aside>
+        <section>
+          <DisplayMovieResults results={movie.results} filterType={movie.filterType} />
+        </section>
+      </main>
     </div>
   );
 }
