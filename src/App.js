@@ -13,6 +13,7 @@ function App() {
     searchTerm: '',
     results: [],
     filterType: '',
+    movieDetails: '',
   });
 
   const showMoviesOnBtn = (e) => {
@@ -49,10 +50,32 @@ function App() {
     }
   };
 
-  const showMovieDetails = () => {
-    const alertString = ['Movie Not Found'];
+  const getMovieID = (e) => {
+    let selectMovieId = '';
+    if (e.target.parentNode.className === 'card-title') {
+      selectMovieId = e.target.parentNode.parentNode.id;
+    } else {
+      selectMovieId = e.target.parentNode.id;
+    }
+    showMovieDetails(selectMovieId);
+
+    // const alertString = ['Movie Not Found'];
+  };
+
+  const showMovieDetails = (movieID) => {
+    axios(`https://api.themoviedb.org/3/movie/${movieID}?api_key=${TMDB_KEY}&language=en-US`)
+      .then((data) => {
+        const movieDetails = data.data;
+        setMovie((prevState) => {
+          return { ...prevState, movieDetails: movieDetails };
+        });
+      })
+      .catch((error) => console.log('Error', error.message));
+  };
+
+  const closeMovieDetails = () => {
     setMovie((prevState) => {
-      return { ...prevState, results: alertString };
+      return { ...prevState, movieDetails: '' };
     });
   };
 
@@ -68,9 +91,9 @@ function App() {
           <FilterMovies showMoviesOnBtn={showMoviesOnBtn} />
         </aside>
         <section>
-          <DisplayMovieResults results={movie.results} filterType={movie.filterType} />
+          <DisplayMovieResults results={movie.results} filterType={movie.filterType} getMovieID={getMovieID} />
+          {typeof movie.movieDetails === 'object' ? <DisplayMovieDetails movieDetails={movie.movieDetails} closeMovieDetails={closeMovieDetails} /> : false}
         </section>
-        <DisplayMovieDetails />
       </main>
     </div>
   );

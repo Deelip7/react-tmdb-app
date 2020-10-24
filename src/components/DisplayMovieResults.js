@@ -1,9 +1,8 @@
 import React from 'react';
 import DisplayBtnResult from './DisplayMovieResult';
 
-function DisplayMovieResults({ results, filterType }) {
+function DisplayMovieResults({ results, filterType, getMovieID }) {
   let filterHeader = '';
-  console.log(filterType);
 
   if (filterType === 'popular') {
     filterHeader = 'Popular Movies';
@@ -18,7 +17,7 @@ function DisplayMovieResults({ results, filterType }) {
     <div className='card-container'>
       <h1>{filterHeader}</h1>
       {results.map((result) => {
-        return <DisplayBtnResult key={result.id} result={result} />;
+        return <DisplayBtnResult key={result.id} result={result} getMovieID={getMovieID} />;
       })}
     </div>
   );
