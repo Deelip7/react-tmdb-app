@@ -98,17 +98,18 @@ main {
     width: 100%;
     font-weight: 500;
     font-size: 1.7rem;
+    text-align: left;
     padding-bottom: 50px;
+    margin: 110px 0px 0px 3vw;
     text-transform: capitalize;
-    margin: 110px 0px 0px;
     box-shadow: 0 4px 2px -2px #00000013;
     border-bottom: 1px solid #3fbfc850;
   }
 
   .card-container {
-    gap: 80px 40px;
+    gap: 50px 40px;
     display: flex;
-    padding: 0 4vw 100px;
+    padding: 0 4vw 100px 4vw;
     flex-flow: row wrap;
     justify-content: center;
 
@@ -149,7 +150,7 @@ main {
 
     .card-container {
       display: flex;
-      margin-top: 90px;
+      margin: 100px 0 50px;
       padding: 0 20px;
       gap: 30px;
 

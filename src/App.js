@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import FilterMovies from './components/FilterMovies';
 import DisplayMovieResults from './components/DisplayMovieResults';
 import SearchMovies from './components/SearchMovies';
-import AlertBox from './components/AlertBox';
+import DisplayMovieDetails from './components/DisplayMovieDetails';
 
 require('dotenv').config();
 
@@ -13,7 +13,6 @@ function App() {
     searchTerm: '',
     results: [],
     filterType: '',
-    alertMsg: '',
   });
 
   const showMoviesOnBtn = (e) => {
@@ -43,15 +42,14 @@ function App() {
               return { ...prevState, results: results, filterType: searchQuery };
             });
           } else {
-            showAlertMsg();
-            e.target.value = 'Fsadads';
+            alert('Movie Not Found');
           }
         })
         .catch((error) => console.log('Error:', error.message));
     }
   };
 
-  const showAlertMsg = () => {
+  const showMovieDetails = () => {
     const alertString = ['Movie Not Found'];
     setMovie((prevState) => {
       return { ...prevState, results: alertString };
@@ -64,7 +62,6 @@ function App() {
     <div className='App'>
       <header>
         <SearchMovies showMoviesOnSearch={showMoviesOnSearch} />
-        <AlertBox showAlertMsg={movie.alertMsg} />
       </header>
       <main>
         <aside>
@@ -73,6 +70,7 @@ function App() {
         <section>
           <DisplayMovieResults results={movie.results} filterType={movie.filterType} />
         </section>
+        <DisplayMovieDetails />
       </main>
     </div>
   );
