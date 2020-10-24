@@ -36,6 +36,7 @@ function App() {
       axios(`https://api.themoviedb.org/3/search/movie?api_key=${TMDB_KEY}&language=en-US&query=${searchQuery}&page=1&include_adult=false`)
         .then((data) => {
           e.target.value = '';
+          e.target.blur();
           let results = data.data.results;
           if (results.length > 0) {
             setMovie((prevState) => {
