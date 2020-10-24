@@ -118,6 +118,7 @@ main {
       flex-flow: row wrap;
       max-width: 200px;
       height: 300px;
+      cursor: pointer;
       text-align: left;
 
       &-poster {
@@ -208,9 +209,10 @@ main {
   padding: 30px;
   width: calc(100vw - 70px);
   height: 100vh;
-  gap: 0px 70px;
+  gap: 70px;
   justify-content: center;
   background-color: #24323ffb;
+  align-content: flex-start;
   line-height: 1.7rem;
   overflow: scroll;
 
@@ -228,7 +230,9 @@ main {
 
   .movieDetail-poster {
     border-radius: 5px;
-    max-width: 100%;
+    width: 240px;
+    height: 350px;
+    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.417);
   }
 
   .movieDetail {
@@ -241,6 +245,10 @@ main {
     max-width: 500px;
     font-size: 0.8rem;
     font-weight: 100;
+
+    &-genres {
+      margin-right: 10px;
+    }
 
     &-title {
       font-size: 1.7rem;
