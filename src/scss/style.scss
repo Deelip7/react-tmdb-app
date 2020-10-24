@@ -63,6 +63,7 @@ main {
     min-height: 100vh;
     background-color: #3b4956;
     box-shadow: 5px 1px 10px -2px #00000031;
+    justify-content: center;
 
     .navlink-container {
       display: flex;
@@ -92,11 +93,11 @@ main {
     padding-bottom: 50px;
     margin: 110px 0px 30px;
     box-shadow: 0 4px 2px -2px #00000013;
-    border-bottom: 1px solid #3fbfc87c;
+    border-bottom: 1px solid #3fbfc850;
   }
 
   .card-container {
-    gap: 40px;
+    gap: 80px 40px;
     display: flex;
     padding: 0 4vw;
     flex-flow: row wrap;
@@ -109,7 +110,6 @@ main {
       height: 350px;
       padding: 20px 0;
       text-align: left;
-      margin-bottom: 50px;
 
       &-poster {
         width: 100%;
@@ -129,6 +129,47 @@ main {
       &-title {
         width: 100%;
         font-size: 0.89rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      display: none;
+    }
+
+    .card-container {
+      display: flex;
+      margin-top: 90px;
+      padding: 0 20px;
+      gap: 30px;
+
+      .card {
+        flex-flow: column nowrap;
+        width: 130px;
+        height: 100%;
+        padding: 0;
+        text-align: left;
+
+        &-poster {
+          width: 140px;
+          height: 180px;
+          object-fit: cover;
+        }
+        &-title {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    aside {
+      justify-content: center;
+      min-width: 60px;
+      .navlink-container {
+        #filter-btn {
+          font-size: 0.75rem;
+        }
       }
     }
   }

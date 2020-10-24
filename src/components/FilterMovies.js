@@ -9,11 +9,13 @@ function FilterMovies({ showMoviesOnBtn }) {
       </button>
       <button onClick={showMoviesOnBtn} className='top_rated' id='filter-btn'>
         <img src={require('./star.svg')} className='top_rated' alt='' />
-        Top Rated
+        Top <br />
+        Rated
       </button>
       <button onClick={showMoviesOnBtn} className='now_playing' id='filter-btn'>
         <img src={require('./play.svg')} className='now_playing' alt='' />
-        Now Playing
+        Now <br />
+        Playing
       </button>
     </div>
   );
