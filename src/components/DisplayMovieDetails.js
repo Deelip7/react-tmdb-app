@@ -13,6 +13,11 @@ function DisplayMovieDetails({ movieDetails, closeMovieDetails }) {
       </div>
       <div className='movieDetail'>
         <div className='movieDetail-title'>{movieDetails.title}</div>
+        <div>{`Release date: ${movieDetails.release_date}`}</div>
+        <div>{`${movieDetails.runtime} min`}</div>
+        <div>
+          <a href={`${movieDetails.homepage}`}>{`Home Page`}</a>
+        </div>
         <div className='movieDetail-overview'>{movieDetails.overview}</div>
       </div>
     </div>
