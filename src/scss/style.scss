@@ -206,25 +206,36 @@ main {
   flex-flow: row wrap;
   top: 0px;
   margin-top: 60px;
-  padding: 30px;
   width: calc(100vw - 70px);
   height: 100vh;
-  gap: 70px;
   justify-content: center;
-  background-color: #24323ffb;
   align-content: flex-start;
   line-height: 1.7rem;
+  background-color: #1a2634;
   overflow: scroll;
 
+  .movieDetail-backdrop-container {
+    width: 100%;
+
+    .movieDetail-backdrop {
+      width: 100%;
+      top: 10px;
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
+
   .movieDetail-close {
-    width: 90%;
+    width: 100%;
+    position: relative;
 
     span {
+      position: absolute;
+      right: 0px;
       cursor: pointer;
-      border: 1px solid #bebebe;
-      padding: 7px 15px;
-      border-radius: 50px;
-      float: right;
+      border: 1px solid #e7e7e7;
+      padding: 1px 10px;
+      border-radius: 20px;
     }
   }
 
@@ -236,14 +247,18 @@ main {
   }
 
   .movieDetail {
+    bottom: 200px;
+    padding: 40px 3vw;
     display: flex;
+    position: relative;
+    border-radius: 10px;
     flex-flow: row wrap;
     align-content: flex-start;
-    gap: 30px;
-    color: #eaeaea;
     text-align: left;
-    max-width: 500px;
+    max-width: 80vw;
     font-size: 0.8rem;
+    background-color: #24323ffb;
+
     font-weight: 100;
 
     &-genres {
