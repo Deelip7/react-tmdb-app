@@ -18,7 +18,7 @@ function App() {
 
   const showMoviesOnBtn = (e) => {
     const buttonType = typeof e === 'string' ? e : e.target.className;
-
+    closeMovieDetails();
     axios(`https://api.themoviedb.org/3/movie/${buttonType}?api_key=${TMDB_KEY}&language=en-US&page=1`)
       .then((data) => {
         let results = data.data.results;
@@ -31,7 +31,15 @@ function App() {
   };
 
   const showMoviesOnSearch = (e) => {
-    const searchQuery = e.target.value;
+    let searchQuery = '';
+
+    if (e.target.className === 'search-icon') {
+      searchQuery = e.target.nextElementSibling.value;
+      e.key = 'Enter';
+    } else {
+      searchQuery = e.target.value;
+    }
+
     if (e.key === 'Enter') {
       axios(`https://api.themoviedb.org/3/search/movie?api_key=${TMDB_KEY}&language=en-US&query=${searchQuery}&page=1&include_adult=false`)
         .then((data) => {

@@ -19,6 +19,7 @@ function DisplayMovieDetails({ movieDetails, closeMovieDetails }) {
     <div className='movieDetail-container'>
       <div className='movieDetail-backdrop-container'>
         <img src={movieBackdrop} className='movieDetail-backdrop' alt={`${movieDetails.title} Poster`}></img>
+        <div className='shadow'></div>
       </div>
       <div className='movieDetail'>
         <div onClick={closeMovieDetails} className='movieDetail-close'>

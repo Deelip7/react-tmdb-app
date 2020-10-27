@@ -107,7 +107,7 @@ main {
   }
 
   .card-container {
-    gap: 100px 40px;
+    gap: 80px 40px;
     display: flex;
     padding: 0 4vw 150px 4vw;
     flex-flow: row wrap;
@@ -223,6 +223,15 @@ main {
       height: 50vh;
       object-fit: cover;
     }
+
+    .shadow {
+      position: absolute;
+      width: 100%;
+      height: 54vh;
+      box-shadow: inset 0px -100px 90px 90px #1a2634;
+      top: 0;
+      left: 0;
+    }
   }
 
   .movieDetail-close {
@@ -233,9 +242,14 @@ main {
       position: absolute;
       right: 0px;
       cursor: pointer;
-      border: 1px solid #e7e7e7;
+      border: 2px solid #ffffff;
       padding: 1px 10px;
       border-radius: 20px;
+    }
+
+    span:hover {
+      border: 2px solid #3699a3;
+      color: #3699a3;
     }
 
     @media screen and (max-width: 600px) {
@@ -257,7 +271,7 @@ main {
     padding: 40px 3vw;
     display: flex;
     position: relative;
-    bottom: 200px;
+    bottom: 250px;
     border-radius: 10px;
     flex-flow: row wrap;
     align-content: flex-start;
@@ -274,13 +288,14 @@ main {
       flex-flow: column;
       gap: 2px;
     }
-
     &-genres {
+      margin-top: 20px;
     }
 
     &-title {
       color: #eaeaea;
       font-size: 1.7rem;
+      max-width: 25ch;
     }
 
     &-overview {
@@ -296,7 +311,7 @@ main {
 
   @media screen and (max-width: 600px) {
     .movieDetail {
-      padding: 100px 20px 20px;
+      padding: 100px 20px 150px;
       bottom: 52vh;
       border-radius: 0px;
       max-width: 100vw;
@@ -310,7 +325,7 @@ main {
         gap: 0px;
       }
       &-title {
-        margin: 40px 0 30px;
+        margin: 40px 0 10px;
       }
     }
   }
