@@ -209,7 +209,7 @@ main {
   width: calc(100vw - 70px);
   height: 100vh;
   justify-content: center;
-  align-content: flex-start;
+  align-items: flex-start;
   line-height: 1.7rem;
   background-color: #1a2634;
   overflow: scroll;
@@ -247,35 +247,42 @@ main {
   }
 
   .movieDetail {
-    bottom: 200px;
     padding: 40px 3vw;
     display: flex;
     position: relative;
+    bottom: 200px;
     border-radius: 10px;
     flex-flow: row wrap;
     align-content: flex-start;
     text-align: left;
     max-width: 80vw;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     background-color: #24323ffb;
+    align-items: flex-start;
+    color: #bebebe;
 
-    font-weight: 100;
+    &-disc {
+      padding-left: 40px;
+      display: flex;
+      flex-flow: column;
+      gap: 10px;
+    }
 
     &-genres {
-      margin-right: 10px;
     }
 
     &-title {
+      color: #eaeaea;
       font-size: 1.7rem;
-      width: 100%;
     }
 
     &-overview {
-      font-size: 1rem;
-      padding-bottom: 100px;
-    }
-    a {
       color: #eaeaea;
+      font-size: 1rem;
+      width: 50ch;
+    }
+
+    a {
       text-decoration: none;
     }
   }

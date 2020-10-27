@@ -88,7 +88,7 @@ function App() {
       </header>
       <main>
         <aside>
-          <FilterMovies showMoviesOnBtn={showMoviesOnBtn} />
+          <FilterMovies showMoviesOnBtn={showMoviesOnBtn} closeMovieDetails={closeMovieDetails} />
         </aside>
         <section>
           <DisplayMovieResults results={movie.results} filterType={movie.filterType} getMovieID={getMovieID} />

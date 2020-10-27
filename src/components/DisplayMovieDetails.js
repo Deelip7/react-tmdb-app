@@ -24,14 +24,17 @@ function DisplayMovieDetails({ movieDetails, closeMovieDetails }) {
         <div onClick={closeMovieDetails} className='movieDetail-close'>
           <span>X</span>
         </div>
+
         <img src={`${moviePoster}`} className='movieDetail-poster' alt={`${title} Poster`}></img>
-        <div>
+
+        <div className='movieDetail-disc'>
           <div className='movieDetail-title'>{title}</div>
-          <div className='movieDetail-genres'>{`Genres: ${genresList} |  ${runtime} min`}</div>
+          <div className='movieDetail-genres'>{`Genres: ${genresList}`}</div>
+          <div> {`Runtime: ${runtime} min`}</div>
           <div>{`Release date: ${release_date}`}</div>
+          <h4 style={{ color: '#eaeaea' }}>Overview</h4>
+          <div className='movieDetail-overview'>{overview}</div>
         </div>
-        {/* <a href={`${homepage}`}>{`Home Page`}</a> */}
-        <div className='movieDetail-overview'>{overview}</div>
       </div>
     </div>
   );
