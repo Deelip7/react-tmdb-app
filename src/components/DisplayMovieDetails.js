@@ -4,7 +4,7 @@ function DisplayMovieDetails({ movieDetails, closeMovieDetails }) {
   let defaultPosterUrl = require('./svgs/TMDB_LOGO2.svg');
   let posterUrl = `https://image.tmdb.org/t/p/w220_and_h330_face`;
 
-  const { title, poster_path, backdrop_path, overview, release_date, runtime, homepage, genres } = movieDetails;
+  const { title, poster_path, backdrop_path, overview, release_date, runtime, genres } = movieDetails;
 
   let moviePoster = poster_path !== null ? `${posterUrl}${poster_path}` : defaultPosterUrl;
   let movieBackdrop = backdrop_path !== null ? `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${backdrop_path}` : defaultPosterUrl;
