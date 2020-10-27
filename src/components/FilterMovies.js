@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FilterMovies({ showMoviesOnBtn, closeMovieDetails }) {
+function FilterMovies({ showMoviesOnBtn }) {
   return (
     <div className='navlink-container'>
       <button onClick={showMoviesOnBtn} className='popular' id='filter-btn'>
