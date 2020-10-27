@@ -265,7 +265,7 @@ main {
       padding-left: 40px;
       display: flex;
       flex-flow: column;
-      gap: 10px;
+      gap: 2px;
     }
 
     &-genres {
@@ -288,24 +288,21 @@ main {
   }
   @media screen and (max-width: 600px) {
     .movieDetail {
-      padding: 40px 3vw;
-      display: flex;
-      position: relative;
-      bottom: 200px;
+      padding: 40px 20px;
+      bottom: 400px;
       border-radius: 10px;
-      flex-flow: row wrap;
-      align-content: flex-start;
-      text-align: left;
-      max-width: 80vw;
+      max-width: 100vw;
       font-size: 0.9rem;
-      background-color: #24323ffb;
-      align-items: flex-start;
+      background-color: #24323fd6;
 
       &-disc {
-        padding-left: 10px;
+        padding-left: 0px;
         display: flex;
         flex-flow: column;
-        gap: 10px;
+        gap: 0px;
+      }
+      &-title {
+        margin: 40px 0 30px;
       }
     }
   }

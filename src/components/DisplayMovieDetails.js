@@ -32,7 +32,7 @@ function DisplayMovieDetails({ movieDetails, closeMovieDetails }) {
           <div className='movieDetail-genres'>{`Genres: ${genresList}`}</div>
           <div> {`Runtime: ${runtime} min`}</div>
           <div>{`Release date: ${release_date}`}</div>
-          <h4 style={{ color: '#eaeaea' }}>Overview</h4>
+          <h4 style={{ color: '#eaeaea', marginTop: '30px' }}>Overview</h4>
           <div className='movieDetail-overview'>{overview}</div>
         </div>
       </div>
