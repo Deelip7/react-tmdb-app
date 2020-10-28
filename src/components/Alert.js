@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Alert({ alertMsgModel }) {
+function Alert({ alertMsgModal }) {
   return (
-    <div className='alertmsg' style={{ right: `${alertMsgModel}` }}>
+    <div className='alertmsg' style={{ right: `${alertMsgModal}` }}>
       Movie not found
     </div>
   );
