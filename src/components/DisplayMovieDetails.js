@@ -1,7 +1,7 @@
 import React from 'react';
 
 function DisplayMovieDetails({ movieDetails, closeMovieDetails }) {
-  let defaultPosterUrl = require('./svgs/TMDB_LOGO2.svg');
+  let defaultPosterUrl = '/svgs/TMDB_LOGO.svg';
   let posterUrl = `https://image.tmdb.org/t/p/w220_and_h330_face`;
 
   const { title, poster_path, backdrop_path, overview, release_date, runtime, genres } = movieDetails;
