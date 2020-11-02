@@ -109,7 +109,7 @@ function App() {
     });
     setTimeout(() => {
       setMovie((prevState) => {
-        return { ...prevState, alertMsgPosition: '-500px' };
+        return { ...prevState, alertMsgPosition: '-600px' };
       });
     }, 2000);
   };

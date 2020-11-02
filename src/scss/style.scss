@@ -278,7 +278,6 @@ main {
     display: flex;
     bottom: 250px;
     text-align: left;
-    max-width: 80vw;
     font-size: 0.9rem;
     color: #bebebe;
     padding: 40px 3vw;
@@ -316,10 +315,11 @@ main {
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     .movieDetail {
+      flex-direction: column;
       bottom: 52vh;
-      max-width: 100vw;
+      width: 100vw;
       font-size: 0.9rem;
       border-radius: 0px;
       padding: 100px 20px 150px;
