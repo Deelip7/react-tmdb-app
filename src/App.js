@@ -36,10 +36,10 @@ function App() {
   const getUserSearchQuery = (e) => {
     let searchQuery = '';
     if (e.target.className === 'search-icon') {
-      searchQuery = e.target.nextElementSibling.value;
+      searchQuery = e.target.nextElementSibling;
       showMoviesOnSearch(searchQuery, e);
     } else {
-      searchQuery = e.target.value;
+      searchQuery = e.target;
       showMoviesOnSearch(searchQuery, e);
     }
   };
@@ -48,26 +48,26 @@ function App() {
   const showMoviesOnSearch = (searchQuery, e) => {
     if (e.key === 'Enter' || e.type === 'click') {
       closeMovieDetails();
-      axios(`https://api.themoviedb.org/3/search/movie?api_key=${TMDB_KEY}&language=en-US&query=${searchQuery}&page=1&include_adult=false`)
+      axios(`https://api.themoviedb.org/3/search/movie?api_key=${TMDB_KEY}&language=en-US&query=${searchQuery.value}&page=1&include_adult=false`)
         .then((data) => {
           let results = data.data.results;
           if (results.length > 0) {
             setMovie((prevState) => {
-              return { ...prevState, results: results, filterType: searchQuery };
+              return { ...prevState, results: results, filterType: searchQuery.value };
             });
           } else {
             alertMsgModal('Movie Not Found');
           }
         })
         .catch(() => clearSearchField(e));
+      clearSearchField(searchQuery);
     }
   };
 
   // Clear input field
   const clearSearchField = (e) => {
-    e.target.value = '';
-    e.target.nextElementSibling.value = '';
-    e.target.blur();
+    e.value = '';
+    e.blur();
   };
 
   //Get movie id when user clicks on card and pass it to showMovieDetails()
