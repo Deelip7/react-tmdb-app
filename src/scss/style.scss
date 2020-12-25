@@ -68,12 +68,14 @@ header {
     img {
       cursor: pointer;
       margin-left: 1rem;
+      width: 3.2rem;
     }
 
     .search-icon {
       z-index: 1;
       cursor: pointer;
       margin-left: 3em;
+      width: 1.6rem;
     }
   }
 }
@@ -118,11 +120,8 @@ main {
     font-weight: 500;
     font-size: 1.7rem;
     text-align: left;
-    padding-bottom: 50px;
     margin: 110px 0px 0px 3vw;
     text-transform: capitalize;
-    box-shadow: 0 4px 2px -2px #00000013;
-    border-bottom: 1px solid #3fbfc850;
   }
 
   .card-container {
