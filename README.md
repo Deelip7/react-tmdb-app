@@ -2,6 +2,9 @@
 
 Discover the most popular, top rated and latest movies. Users can also find a movie based on the movie title.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a0eff102-dae5-4292-93bd-d06a2932b234/deploy-status)](https://app.netlify.com/sites/festive-wilson-a51c32/deploys)
+
+
 ![Homepage screenshot](https://www.theelipan.com/images/tmdb-mockup.svg)
 
 ## Tools
@@ -12,9 +15,9 @@ Discover the most popular, top rated and latest movies. Users can also find a mo
 
 ## Installation
 
-React Setup & Git Initialize
+React Setup 
 
-    npx create-react-app frontend
+    npx create-react-app .
 
 Fetch Date
 
