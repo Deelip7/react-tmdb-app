@@ -1,4 +1,4 @@
-#🎥 TMDB Movie App
+# 🎥 TMDB Movie App
 
 Discover the most popular, top rated and latest movies. Users can also find a movie based on the movie title.
 
@@ -14,7 +14,6 @@ Discover the most popular, top rated and latest movies. Users can also find a mo
 
 React Setup & Git Initialize
 
-  
     npx create-react-app frontend
 
 Fetch Date
@@ -30,12 +29,11 @@ Builds the app for production to the build folder.
      npm run build
     
     
-
 ## Author
 
   Theelipan Prabakar - [www.theelipan.com](https://www.theelipan.com)
 
-  Project Link: [https://rn-store.herokuapp.com/](https://rn-store.herokuapp.com/)
+  Project Link: [https://festive-wilson-a51c32.netlify.app/](https://festive-wilson-a51c32.netlify.app/)
   
   
 ## License
