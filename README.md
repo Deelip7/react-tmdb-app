@@ -4,8 +4,8 @@ Discover the most popular, top rated and latest movies. Users can also find a mo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a0eff102-dae5-4292-93bd-d06a2932b234/deploy-status)](https://app.netlify.com/sites/festive-wilson-a51c32/deploys)
 
-
-![Homepage screenshot](https://www.theelipan.com/images/tmdb-mockup.svg)
+![Mobile screenshot](https://raw.githubusercontent.com/Deelip7/react-tmdb-app/59c63ed5d46f40e45f6ab3bdb88e951cd305c988/public/svgs/TMDBPhone.webp)
+![Homepage screenshot](https://raw.githubusercontent.com/Deelip7/react-tmdb-app/59c63ed5d46f40e45f6ab3bdb88e951cd305c988/public/svgs/TMDBWeb.jpg)
 
 ## Tools
 
